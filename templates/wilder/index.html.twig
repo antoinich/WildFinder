@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wilder index{% endblock %}
+
+{% block body %}
+    <h1>All Wilders</h1>
+
+    <table class="table">
+        <tbody>
+        {% for wilder in wilders %}
+            <li class="media">
+                <img src={{ wilder.image }} class="mr-3" alt="...">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">Best developer joke</h5>
+                     {{ wilder.joke }}
+                </div>
+            </li>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('wilder_new') }}">Create new</a>
+{% endblock %}

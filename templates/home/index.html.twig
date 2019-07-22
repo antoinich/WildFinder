@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>WildFinder</h1>
+    <h1>Find Your amazing Wilder</h1>
+    <div class="row flex">
+        {% for wilder in wilders %}
+            <div class="card" style="width: 18rem;">
+                <img src={{ wilder.image }} class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ wilder.name }}</h5>
+                    <p class="card-text">{{ wilder.joke }}</p>
+                    <a href="#" class="btn btn-primary">More informations</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
