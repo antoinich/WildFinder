@@ -1,5 +1,8 @@
 # WildFinder
 
+
+A simple training with symfony 4 during Wild Code School
+
 clone the project
 
 composer install
